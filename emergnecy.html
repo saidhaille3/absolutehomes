@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Procedures | Mosse Assisted Living LLC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A2238',
+            accent: '#F5BE2C',
+            soft: '#F4F6F8',
+            alert: '#991b1b'
+          },
+          fontFamily: {
+            glam: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-soft text-primary font-glam transition-all duration-300">
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 right-0 w-72 h-full bg-white shadow-xl transform translate-x-full transition-transform z-50 p-6 space-y-6 text-right">
+  <button id="closeMenu" class="text-xl text-gray-500 hover:text-accent" aria-label="Close menu">&times;</button>
+  <nav class="space-y-4 text-lg font-glam">
+    <a href="index.html" class="block hover:text-accent border-b border-gray-200 pb-2">Home</a>
+    <a href="index.html#services" class="block hover:text-accent border-b border-gray-200 pb-2">Our Services</a>
+    <a href="staff.html" class="block hover:text-accent border-b border-gray-200 pb-2">Staff Portal</a>
+    <a href="login.html" class="block hover:text-accent border-b border-gray-200 pb-2">Client Login</a>
+    <a href="emergency.html" class="block hover:text-accent border-b border-gray-200 pb-2">Emergency Plan</a>
+    <a href="about.html" class="block hover:text-accent">About</a>
+  </nav>
+</div>
+
+<!-- Navbar -->
+<header class="fixed top-0 w-full z-50 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="images/logo.png" class="h-10 w-auto rounded" alt="Mosse Logo" />
+      <span class="text-accent text-lg font-semibold">Mosse Assisted Living LLC</span>
+    </a>
+    <nav class="hidden md:flex space-x-6 text-sm">
+      <a href="index.html" class="hover:text-accent">Home</a>
+      <a href="index.html#services" class="hover:text-accent">Our Services</a>
+      <a href="staff.html" class="hover:text-accent">Staff Portal</a>
+      <a href="login.html" class="hover:text-accent">Client Login</a>
+      <a href="emergency.html" class="hover:text-accent font-bold">Emergency Plan</a>
+      <a href="about.html" class="hover:text-accent">About</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button id="menuToggle" class="md:hidden p-2" aria-label="Open menu">
+        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="pt-28 pb-12 text-center bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <h1 class="text-4xl font-bold text-accent mb-4">Emergency Procedures</h1>
+    <p class="text-lg text-gray-700">How to respond quickly, calmly, and legally to fire, medical, weather, and behavioral emergencies.</p>
+    <p class="mt-2 text-sm text-gray-500">Last Reviewed: August 30, 2025</p>
+  </div>
+</section>
+
+<!-- Emergency Procedures -->
+<section class="bg-soft py-16">
+  <div class="max-w-4xl mx-auto px-6 space-y-12">
+
+    <!-- Section 1 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">1. Fire</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>Pull the fire alarm and call 911</li>
+        <li>Evacuate residents using front and back exits</li>
+        <li>Meet across the street at the designated safe point (Gichitwaa Kateri Church)</li>
+        <li>Account for all residents and staff</li>
+        <li>Do not re-enter the home until cleared by fire officials</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">2. Medical Emergency</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>Call 911 immediately if the person is unresponsive or in distress</li>
+        <li>Provide CPR or first aid only if trained and delegated</li>
+        <li>Call the on-call nurse and director after 911</li>
+        <li>Document what occurred in RTasks and complete an incident report</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">3. Severe Weather</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>Move residents to the basement level during tornado warnings</li>
+        <li>Keep emergency supplies (flashlights, water, radio) on hand</li>
+        <li>Remain indoors during blizzards or storms</li>
+        <li>Notify the nurse if any resident appears distressed</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">4. Elopement or Missing Resident</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>Call 911 if a resident leaves without permission and is vulnerable</li>
+        <li>Immediately notify the director and nurse</li>
+        <li>Record time last seen, clothing, and direction</li>
+        <li>Document everything in RTasks</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">5. Behavioral Emergency</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>If behavior poses danger, call 911 first</li>
+        <li>Then notify nurse and director</li>
+        <li>Do not attempt physical restraint unless delegated</li>
+        <li>Redirect if possible and ensure safety of others</li>
+        <li>Log behavior note in RTasks immediately after</li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">6. Power Outage</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>Use emergency flashlights (do not use candles)</li>
+        <li>If outage exceeds 2 hours, contact nurse and director</li>
+        <li>Check if resident medical equipment is battery-powered (e.g., CPAP)</li>
+      </ul>
+    </div>
+
+    <!-- Section 7 -->
+    <div>
+      <h2 class="text-2xl font-semibold text-primary mb-4">7. Evacuation Supplies</h2>
+      <p class="text-sm text-gray-700">Supplies should be kept near main exit and updated monthly:</p>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+        <li>First aid kit</li>
+        <li>Flashlights and batteries</li>
+        <li>Blankets and gloves</li>
+        <li>Water and non-perishable snacks</li>
+        <li>Resident contact list and MARs</li>
+      </ul>
+    </div>
+
+    <p class="text-sm text-gray-500 text-center mt-12">
+      Questions or unclear on any protocol? Email <a href="mailto:mosseassistedliving@gmail.com" class="text-accent hover:underline">mosseassistedliving@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-100 py-6 text-center text-sm text-gray-600 font-glam">
+  © 2025 Mosse Assisted Living LLC. All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = !mobileMenu.classList.contains("translate-x-full");
+  mobileMenu.classList.toggle("translate-x-full", isOpen);
+  overlay.classList.toggle("hidden", isOpen);
+});
+
+document.getElementById("closeMenu").addEventListener("click", () => {
+  mobileMenu.classList.add("translate-x-full");
+  overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.add("translate-x-full");
+  overlay.classList.add("hidden");
+});
+</script>
+
+</body>
+</html>

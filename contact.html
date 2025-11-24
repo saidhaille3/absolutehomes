@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mosse Assisted Living | Rosemount, MN</title>
+  <meta name="description" content="Mosse Assisted Living – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts -->
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #F9F9F6;
+    }
+    
+    h1,
+    h2,
+    h3 {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    /* Transparent nav effect on scroll */
+    .scrolled-nav {
+      background-color: rgba(29, 43, 79, 0.9);
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav-default {
+      background-color: #1D2B4F;
+      /* solid at top */
+    }
+    
+    .scrolled-nav {
+      background-color: rgba(29, 43, 79, 0.85);
+      /* slightly transparent on scroll */
+      backdrop-filter: blur(4px);
+      footer a {
+  text-decoration: none;
+}
+    }
+    
+    #mobileMenu.scrolled-menu {
+      background-color: rgba(29, 43, 79, 0.85);
+      /* Transparent on scroll */
+      backdrop-filter: blur(6px);
+    }
+    
+    < #slider {
+      background-size: contain !important;
+      /* Prevents zooming/cropping */
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+    
+    .card-content.expanded {
+      max-height: 500px;
+      /* adjust based on your content */
+    }
+  a {
+    color: white !important;
+    text-decoration: none !important;
+  }
+  a:hover {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  </style>
+</head>
+
+<body class="text-gray-800">
+  
+  <!-- Utility Bar -->
+  <div id="navBar" class="nav-default text-white flex justify-between items-center px-6 py-4 text-lg sticky top-0 z-50 transition-colors duration-300"> <!-- Left: Menu -->
+    <button id="menuToggle" class="focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hover:text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    
+    <!-- Right: Icons -->
+    <!-- Right: Icons -->
+    <!-- Right: Icons -->
+    <div class="flex items-center space-x-6">
+      <!-- 📞 Phone -->
+      <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+        </svg>
+      </a>
+      
+      <!-- ✉️ Email -->
+      <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Logo Section -->
+  <div class="text-center py-6">
+    <img src="images/mlogo.png" alt="Mosse Assisted Living Logo" class="mx-auto w-36">
+  </div>
+  
+  <!-- Mobile Menu -->
+  <!-- Mobile Menu (Dropdown Style) -->
+  <!-- Mobile Menu (Dropdown Style) -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-[#1D2B4F] text-white z-50 hidden transition-colors duration-300">
+    <!-- Top Row: Close + Icons -->
+    <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+      <!-- ✕ Close -->
+      <button onclick="toggleMenu()" class="text-white text-xl font-light focus:outline-none">✕</button>
+      
+      <!-- Phone & Email Icons (Match Top Nav) -->
+      <!-- Phone & Email Icons (Match Top Nav) -->
+      <div class="flex items-center space-x-6 pt-0.5">
+        <!-- 📞 Phone -->
+        <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+          </svg>
+        </a>
+        
+        <!-- ✉️ Email -->
+        <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Navigation Links -->
+    <ul class="flex flex-col space-y-4 px-6 py-6 text-lg">
+      <li><a href="index.html" class="hover:text-gold-500">Home</a></li>
+      <li><a href="services.html" class="hover:text-gold-500">Services</a></li>
+      <li><a href="amenities.html" class="hover:text-gold-500">Amenities</a></li>
+      <li><a href="faq.html" class="hover:text-gold-500">FAQs</a></li>
+      <li><a href="about.html" class="hover:text-gold-500">About Us</a></li>
+      <li>
+        <a href="tour.html" class="mt-4 inline-block bg-[#C89438] hover:bg-[#b58028] text-white py-2 px-4 rounded transition-all duration-300">
+          Schedule a Tour
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Hero -->
+<!-- ⬛ Contact Header Block – Section 1 -->
+<section class="bg-[#F9F9F6] text-center py-0 px-6 md:px-0 opacity-0 translate-y-4 transition duration-700">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#1D2B4F] tracking-tight">
+      Get in Touch with Mosse
+    </h1>
+    <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+      We’re happy to answer your questions or help you take the next step toward residency. Whether you’re a family member, case manager, or vendor, you’re in the right place.
+    </p>
+  </div>
+</section>
+<!-- 🟧 Contact Details Block – Section 2 -->
+<section class="bg-white py-12 px-6">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+    
+    <!-- 🏠 Contact Info Card -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold text-[#1D2B4F] flex items-center gap-2">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 12l4.243-4.243m0 8.486A8 8 0 1112 4a8 8 0 015.657 13.657z" />
+        </svg>
+        Contact Details
+      </h2>
+      <p class="text-gray-700">
+        <strong>Address:</strong><br>
+        <a href="https://maps.google.com/?q=14399 Bayberry Circle, Rosemount, MN 55068"
+           target="_blank"
+           rel="noopener"
+           class="text-blue-600 hover:underline">
+          14399 Bayberry Circle<br>Rosemount, MN 55068
+        </a>
+      </p>
+
+      <p class="text-gray-700">
+        <strong>Phone:</strong><br>
+        <a href="tel:+16126364172" class="text-blue-600 hover:underline">
+          (612) 636‑4172
+        </a>
+      </p>
+
+      <p class="text-gray-700">
+        <strong>Email:</strong><br>
+        <a href="mailto:mosseassisted@gmail.com" class="text-blue-600 hover:underline">
+          mosseassisted@gmail.com
+        </a>
+      </p>
+
+      <p class="text-gray-700">
+        <strong>Office Hours:</strong><br>
+        Monday – Friday: 9:00 AM – 5:00 PM<br>
+        Saturday: 10:00 AM – 1:00 PM<br>
+        Sunday: Closed
+      </p>
+
+      <p class="text-gray-700">
+        <strong>Directions:</strong><br>
+        Located just off Hwy 3. turn onto Connemara Trail and follow to Bayberry Circle.  
+        Look for an off-white colored home.
+      </p>
+
+      <p class="text-gray-700">
+        <strong>Parking:</strong><br>
+        Street and driveway parking available directly in front of home.  
+        No permit required.
+      </p>
+
+
+      <!-- Optional: Socials (if you ever add them) -->
+      <!-- <div class="flex gap-4 pt-2">
+        <a href="#" aria-label="Facebook" class="text-blue-600 hover:text-blue-800">
+          <svg ...>Facebook SVG here</svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="text-blue-600 hover:text-blue-800">
+          <svg ...>LinkedIn SVG here</svg>
+        </a>
+      </div> -->
+    </div>
+
+    <!-- 🗺️ Map Placeholder -->
+
+
+  </div>
+</section>
+<!-- 🟨 Live Embedded Map – Section 3 -->
+<section class="bg-[#F9F9F6] py-12 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#1D2B4F] mb-4 flex items-center gap-2">
+      <svg class="w-6 h-6 text-[#C89438]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 012-2h14a2 2 0 012 2v10.382a2 2 0 01-1.553 1.894L15 20l-3-1.5-3 1.5z" />
+      </svg>
+      Find Us on the Map
+    </h2>
+
+    <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.434395409922!2d-93.13049968442495!3d44.72812387909901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f629bd1fc7963b%3A0x9c00c4c6f4a289a!2s14399%20Bayberry%20Cir%2C%20Rosemount%2C%20MN%2055068!5e0!3m2!1sen!2sus!4v1697074903459!5m2!1sen!2sus"
+        width="100%" height="100%" style="border:0;" allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mosse Assisted Living – Map Location">
+      </iframe>
+    </div>
+
+    <!-- Optional Directions Link -->
+    <div class="text-center mt-4">
+      <a href="https://maps.google.com/?q=14399 Bayberry Circle, Rosemount, MN 55068"
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center gap-2 text-blue-700 hover:underline text-sm">
+
+        Get Directions on Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Contact Form Section -->
+<section id="contact-form" class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+  <h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M16 12H8m8 0a4 4 0 00-8 0m8 0a4 4 0 01-8 0m8 0v2a4 4 0 01-4 4H8" />
+    </svg>
+    Send Us a Message
+  </h2>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">    <!-- Full Name -->
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+      <input type="text" id="name" name="name" class="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400" />
+      <input type="hidden" name="_subject" value="New Message from Website">
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
+      <input type="email" id="email" name="email" required class="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400" />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+      <input type="tel" id="phone" name="phone" class="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400" />
+    </div>
+
+    <!-- Who Are You? -->
+    <div>
+      <label for="role" class="block text-sm font-medium text-gray-700">Who Are You?</label>
+      <select id="role" name="role" class="mt-1 w-full border border-gray-300 rounded px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-gold-400">
+        <option>Choose one</option>
+        <option>Client</option>
+        <option>Family Member</option>
+        <option>Case Manager</option>
+        <option>Vendor</option>
+        <option>MDH / BELTSS</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+      <input type="text" id="subject" name="subject" class="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400" />
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+      <textarea id="message" name="message" rows="5" class="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400"></textarea>
+    </div>
+
+    <!-- Optional Upload -->
+    <div>
+      <label for="upload" class="block text-sm font-medium text-gray-700">Upload Document (PDF, DOCX)</label>
+      <input type="file" id="upload" name="upload" accept=".pdf,.doc,.docx" class="mt-1 block w-full text-sm text-gray-500" />
+    </div>
+
+    <!-- CAPTCHA (Simple Math) -->
+
+    <!-- Submit Button -->
+    <div class="pt-2">
+      <button type="submit" class="bg-[#C89438] hover:bg-[#b58028] text-white px-6 py-2 rounded transition-all duration-300">
+        Submit Message
+      </button>
+    </div>
+  </form>
+
+  <!-- Success/Error Message Placeholder -->
+  <div id="form-status" class="mt-4 text-sm font-semibold text-green-600 hidden">Message sent successfully!</div>
+</section>
+<!-- Optional Scroll Reveal Effect -->
+
+  
+  <!-- Footer -->
+  <footer class="mt-10 bg-[#1D2B4F] text-white text-sm py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div><img src="images/mlogo.png" alt="Mosse Logo" class="w-16 mb-2" /></div>
+<div class="space-y-1 mt-4 md:mt-0">
+  <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
+  <p>
+    Phone:
+    <a href="tel:+16126364172" class="underline hover:text-[#C89438] transition-colors">
+      (612) 636-4172
+    </a>
+  </p>
+  <p>
+    Email:
+    <a href="mailto:mosseassisted@gmail.com" class="underline hover:text-[#C89438] transition-colors">
+      mosseassisted@gmail.com
+    </a>
+  </p>
+</div>
+    </div>
+  </footer>
+  
+  <!-- Scroll Navbar Logic -->
+  <script>
+    // ============================
+    // 🟦 NAVBAR + MOBILE MENU LOGIC
+    // ============================
+    const navBar = document.getElementById("navBar");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuToggle = document.getElementById("menuToggle");
+    
+    function toggleMenu() {
+      mobileMenu.classList.toggle("hidden");
+    }
+    
+    menuToggle.addEventListener("click", toggleMenu);
+    
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        navBar.classList.add("scrolled-nav");
+      } else {
+        navBar.classList.remove("scrolled-nav");
+      }
+      
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.toggle("scrolled-menu", window.scrollY > 10);
+      }
+    });
+    
+    // ============================
+    // 🟨 HERO SLIDESHOW LOGIC
+    // ============================
+    const slider = document.getElementById("slider");
+    const images = [
+      "images/1.jpeg",
+      "images/2.jpeg",
+      "images/3.jpeg",
+      "images/4.jpeg",
+      "images/5.jpeg",
+      "images/6.jpeg",
+      "images/7.jpeg",
+      "images/8.jpeg",
+      "images/9.jpeg",
+      "images/10.png",
+      "images/11.jpeg",
+      "images/12.jpeg",
+      "images/13.jpeg",
+    ];
+    
+    let index = 0;
+    
+    function showNextImage() {
+      slider.style.backgroundImage = `url('${images[index]}')`;
+      slider.style.opacity = 0;
+      setTimeout(() => {
+        slider.style.opacity = 1;
+      }, 200);
+      index = (index + 1) % images.length;
+    }
+    
+    showNextImage();
+    setInterval(showNextImage, 5000);
+    
+    // ============================
+    // 🟩 COLLAPSIBLE CARD LOGIC
+    // ============================
+    function toggleCard(card) {
+      const content = card.querySelector(".card-content");
+      const button = card.querySelector(".toggle-btn");
+      
+      const isExpanded = content.classList.contains("expanded");
+      
+      content.classList.toggle("expanded");
+      button.innerText = isExpanded ? "Show More" : "Show Less";
+    }
+    
+    // On load, collapse all
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".card-content").forEach((c) =>
+        c.classList.remove("expanded")
+      );
+        document.addEventListener("DOMContentLoaded", function() {
+    const contactHeader = document.querySelector("section");
+    contactHeader.classList.add("opacity-0", "translate-y-4", "transition", "duration-700");
+    
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        contactHeader.classList.remove("opacity-0", "translate-y-4");
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    
+    observer.observe(contactHeader);
+    
+    // Simple CAPTCHA
+    const num1 = Math.floor(Math.random() * 10 + 1);
+    const num2 = Math.floor(Math.random() * 10 + 1);
+    document.getElementById("num1").textContent = num1;
+    document.getElementBy
+  });
+    });
+  </script>
+</body>
+
+</html>

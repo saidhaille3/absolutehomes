@@ -1,0 +1,364 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mosse Assisted Living | Rosemount, MN</title>
+  <meta name="description" content="Mosse Assisted Living – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #F9F9F6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* Transparent nav effect on scroll */
+    .scrolled-nav {
+      background-color: rgba(29, 43, 79, 0.9);
+      transition: background-color 0.3s ease;
+    }
+    .nav-default {
+      background-color: #1D2B4F; /* solid at top */
+    }
+
+    .scrolled-nav {
+      background-color: rgba(29, 43, 79, 0.85); /* slightly transparent on scroll */
+      backdrop-filter: blur(4px);
+      footer a {
+  text-decoration: none;
+}
+    }
+
+    #mobileMenu.scrolled-menu {
+      background-color: rgba(29, 43, 79, 0.85); /* Transparent on scroll */
+      backdrop-filter: blur(6px);
+    }
+
+    #slider {
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+    }
+
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .card-content.expanded {
+      max-height: 500px;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 overflow-x-hidden">
+
+  <!-- Utility Bar -->
+  <div id="navBar" class="nav-default text-white flex justify-between items-center px-6 py-4 text-lg sticky top-0 z-50 transition-colors duration-300">
+    <!-- Left: Menu -->
+    <button id="menuToggle" class="focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hover:text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Right: Icons -->
+    <div class="flex items-center space-x-6">
+      <!-- 📞 Phone -->
+      <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+        </svg>
+      </a>
+
+      <!-- ✉️ Email -->
+      <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="text-center py-6">
+    <img src="images/mlogo.png" alt="Mosse Assisted Living Logo" class="mx-auto w-36">
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-[#1D2B4F] text-white z-50 hidden transition-colors duration-300">
+    <!-- Top Row -->
+    <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+      <button onclick="toggleMenu()" class="text-white text-xl font-light focus:outline-none">✕</button>
+      <div class="flex items-center space-x-6 pt-0.5">
+        <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+          </svg>
+        </a>
+
+        <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="flex flex-col space-y-4 px-6 py-6 text-lg">
+      <li><a href="index.html" class="hover:text-gold-500">Home</a></li>
+      <li><a href="amenities.html" class="hover:text-gold-500">Amenities</a></li>
+      <li><a href="tour.html" class="hover:text-gold-500">Tour</a></li>
+      <li><a href="faq.html" class="hover:text-gold-500">FAQs</a></li>
+      <li><a href="contact.html" class="hover:text-gold-500">Contact</a></li>
+      <li>
+        <a href="tour.html" class="mt-4 inline-block bg-[#C89438] hover:bg-[#b58028] text-white py-2 px-4 rounded transition-all duration-300">
+          Schedule a Tour
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Hero -->
+  <section class="bg-[#F9F9F6] text-center py-16 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#1D2B4F] mb-4">Our Services</h1>
+    <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">Personalized care for adults 55–65. With comfort, safety, and dignity at the heart of everything we do.</p>
+  </section>
+
+  <!-- Categories -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-gray-800">
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-[#1D2B4F]">Health & Medical</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Medication administration</li>
+          <li>Insulin injections & delegated care</li>
+          <li>Vitals & blood sugar checks</li>
+          <li>Fall prevention protocols</li>
+          <li>24-hour staff monitoring</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-[#1D2B4F]">Daily Support</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Meal prep & dietary assistance</li>
+          <li>Laundry & housekeeping</li>
+          <li>Transportation & errands</li>
+          <li>Grooming & dressing help</li>
+          <li>Mobility & transfers</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-[#1D2B4F]">Emotional & Behavioral</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Anxiety, agitation and other behavioral support</li>
+          <li>1:1 socialization</li>
+          <li>Redirection & de-escalation</li>
+          <li>Orientation reminders</li>
+          <li>Calm, stable environment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waiver -->
+  <section class="bg-[#F9F9F6] py-16 px-4 text-center">
+    <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-3">CADI, BI & Elderly Waiver Friendly</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Mosse Assisted Living is approved to serve CADI, BI and Elderly Waiver clients under Minnesota’s waiver programs. We also accept private pay residents and county referrals.</p>
+  </section>
+
+  <!-- Care Levels -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-8 text-center">Levels of Care</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-gray-800">
+        <div class="bg-[#F9F9F6] p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg text-[#1D2B4F] mb-2">Level 1: Basic Support</h3>
+          <p>Ideal for residents needing light supervision, medication reminders, and general household assistance.</p>
+        </div>
+        <div class="bg-[#F9F9F6] p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg text-[#1D2B4F] mb-2">Level 2: Moderate Support</h3>
+          <p>Includes personal care, assistance with ADLs, delegated nursing services, and emotional regulation support.</p>
+        </div>
+        <div class="bg-[#F9F9F6] p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg text-[#1D2B4F] mb-2">Level 3: Enhanced Support</h3>
+          <p>Designed for higher behavioral or medical needs requiring close monitoring and nurse involvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nurse Delegation -->
+  <section class="bg-[#F9F9F6] py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-3">Nurse Delegation You Can Trust</h2>
+      <p class="text-lg text-gray-700">Our licensed RN reviews each resident’s care needs, provide staff training, and ensures delegation for all clinical tasks.</p>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Staffing -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-3">Trained & Compassionate Staff</h2>
+      <p class="text-lg text-gray-700">Each team member completes annual MDH‑approved training, competency checks, and delegated clinical reviews to ensure your loved one’s safety, dignity, and continuity of care.</p>
+    </div>
+  </section>
+
+  <!-- 1:1 Services -->
+  <section class="bg-[#F9F9F6] py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-3">Optional 1:1 Care Plans</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Residents may receive individualized 1:1 services based on assessed need, covering social, behavioral, or clinical domains with transparent rate structures.</p>
+  </section>
+
+<!-- Qualification Mini Tool -->
+<section class="bg-[#F9F9F6] py-20 px-6 text-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#1D2B4F]/5 via-[#C89438]/10 to-[#1D2B4F]/5 pointer-events-none"></div>
+  
+  <div class="max-w-2xl mx-auto relative z-10 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-10 border border-[#C89438]/30 hover:shadow-2xl transition-shadow duration-500">
+    <h2 class="text-3xl font-semibold text-[#1D2B4F] mb-3">Find Out If You Qualify</h2>
+    <p class="text-gray-700 mb-8">Answer a few quick questions to see if Mosse Assisted Living may be a good fit.</p>
+    
+    <form id="qualifyForm" class="space-y-5 text-left">
+      <div>
+        <label class="block text-[#1D2B4F] font-semibold mb-1">Age Range</label>
+        <select id="age" class="border border-gray-300 focus:ring-2 focus:ring-[#C89438] p-3 rounded-lg w-full outline-none transition-all duration-300">
+          <option value="under">Under 55</option>
+          <option value="55to65">55–65</option>
+          <option value="over">Over 65</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-[#1D2B4F] font-semibold mb-1">Current Support Level</label>
+        <select id="support" class="border border-gray-300 focus:ring-2 focus:ring-[#C89438] p-3 rounded-lg w-full outline-none transition-all duration-300">
+          <option value="independent">Independent</option>
+          <option value="some">Some Help</option>
+          <option value="full">Full Assistance</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-[#1D2B4F] font-semibold mb-1">Primary Need</label>
+        <select id="need" class="border border-gray-300 focus:ring-2 focus:ring-[#C89438] p-3 rounded-lg w-full outline-none transition-all duration-300">
+          <option value="medical">Medical</option>
+          <option value="behavioral">Behavioral</option>
+          <option value="mobility">Mobility</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div class="text-center pt-4">
+        <button type="button" onclick="checkEligibility()" class="bg-[#C89438] hover:bg-[#b58028] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300">
+          Check Eligibility
+        </button>
+      </div>
+      
+      <p id="result" class="text-lg font-semibold mt-6 text-[#1D2B4F] text-center opacity-0 transition-opacity duration-500"></p>
+    </form>
+  
+  </div>
+</section>
+  <!-- Service Customization Promise -->
+  <section class="bg-[#1D2B4F] text-white py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-3">Our Service Customization Promise</h2>
+      <p class="text-lg text-[#FCECCF]">No two residents receive the same plan. Every service, from medication setup to transportation, is tailored precisely to the person’s medical needs, goals, and independence level. We adjust plans continuously to meet evolving needs with care and respect.</p>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="bg-[#1D2B4F] text-white text-sm py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div>
+        <img src="images/mlogo.png" class="w-16 mb-2" alt="Mosse Logo">
+      </div>
+<div class="space-y-1 mt-4 md:mt-0">
+  <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
+  <p>
+    Phone:
+    <a href="tel:+16126364172" class="underline hover:text-[#C89438] transition-colors">
+      (612) 636-4172
+    </a>
+  </p>
+  <p>
+    Email:
+    <a href="mailto:mosseassisted@gmail.com" class="underline hover:text-[#C89438] transition-colors">
+      mosseassisted@gmail.com
+    </a>
+  </p>
+</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+<script>
+  // 🟦 NAVBAR + MOBILE MENU LOGIC
+  const navBar = document.getElementById("navBar");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuToggle = document.getElementById("menuToggle");
+  
+  function toggleMenu() {
+    mobileMenu.classList.toggle("hidden");
+    document.body.classList.toggle("overflow-hidden");
+  }
+  
+  menuToggle.addEventListener("click", toggleMenu);
+  
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) navBar.classList.add("scrolled-nav");
+    else navBar.classList.remove("scrolled-nav");
+    
+    if (!mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.toggle("scrolled-menu", window.scrollY > 10);
+    }
+  });
+  
+  // 🟩 QUALIFICATION TOOL LOGIC — fixed global scope
+  function checkEligibility() {
+    const age = document.getElementById("age").value;
+    const support = document.getElementById("support").value;
+    const result = document.getElementById("result");
+    
+    let message = "";
+    if (age === "55to65") {
+      message = "✅ Likely Eligible — Let’s talk about placement and funding options.";
+    } else if (age === "under") {
+      message = "⚠️ We primarily serve adults 55–65 — contact us for referrals.";
+    } else if (age === "over") {
+      message = "⚠️ May qualify under Elderly or CADI Waiver — let’s confirm together.";
+    } else {
+      message = "🤝 Please contact us — eligibility may depend on more details.";
+    }
+    
+    result.style.opacity = 0;
+    setTimeout(() => {
+      result.textContent = message;
+      result.style.opacity = 1;
+    }, 150);
+  
+  }
+</script>
+</body>
+</html>

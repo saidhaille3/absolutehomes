@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mosse Assisted Living | Rosemount, MN</title>
+  <meta name="description" content="Mosse Assisted Living – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #F9F9F6;
+    }
+    h1, h2, h3 {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* Transparent nav effect on scroll */
+    .scrolled-nav {
+      background-color: rgba(29, 43, 79, 0.9);
+      transition: background-color 0.3s ease;
+    }
+  .nav-default {
+    background-color: #1D2B4F; /* solid at top */
+  }
+
+  .scrolled-nav {
+    background-color: rgba(29, 43, 79, 0.85); /* slightly transparent on scroll */
+    backdrop-filter: blur(4px);
+    footer a {
+  text-decoration: none;
+}
+  }
+ 
+  #mobileMenu.scrolled-menu {
+    background-color: rgba(29, 43, 79, 0.85); /* Transparent on scroll */
+    backdrop-filter: blur(6px);
+  }
+<
+  #slider {
+    background-size: contain !important;   /* Prevents zooming/cropping */
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.card-content.expanded {
+  max-height: 500px; /* adjust based on your content */
+}
+
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Utility Bar -->
+<div id="navBar" class="nav-default text-white flex justify-between items-center px-6 py-4 text-lg sticky top-0 z-50 transition-colors duration-300">    <!-- Left: Menu -->
+    <button id="menuToggle" class="focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hover:text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Right: Icons -->
+<!-- Right: Icons -->
+<!-- Right: Icons -->
+<div class="flex items-center space-x-6">
+  <!-- 📞 Phone -->
+  <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+    </svg>
+  </a>
+
+  <!-- ✉️ Email -->
+  <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+    </svg>
+  </a>
+</div>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="text-center py-6">
+    <img src="images/mlogo.png" alt="Mosse Assisted Living Logo" class="mx-auto w-36">
+  </div>
+
+  <!-- Mobile Menu -->
+<!-- Mobile Menu (Dropdown Style) -->
+<!-- Mobile Menu (Dropdown Style) -->
+<div id="mobileMenu" class="fixed top-0 left-0 w-full bg-[#1D2B4F] text-white z-50 hidden transition-colors duration-300">
+  <!-- Top Row: Close + Icons -->
+  <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+    <!-- ✕ Close -->
+    <button onclick="toggleMenu()" class="text-white text-xl font-light focus:outline-none">✕</button>
+
+    <!-- Phone & Email Icons (Match Top Nav) -->
+<!-- Phone & Email Icons (Match Top Nav) -->
+<div class="flex items-center space-x-6 pt-0.5">
+  <!-- 📞 Phone -->
+  <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+    </svg>
+  </a>
+
+  <!-- ✉️ Email -->
+  <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+    </svg>
+  </a>
+</div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="flex flex-col space-y-4 px-6 py-6 text-lg">
+    <li><a href="index.html" class="hover:text-gold-500">Home</a></li>
+    <li><a href="services.html" class="hover:text-gold-500">Services</a></li>
+    <li><a href="amenities.html" class="hover:text-gold-500">Amenities</a></li>
+    <li><a href="faq.html" class="hover:text-gold-500">FAQs</a></li>
+    <li><a href="contact.html" class="hover:text-gold-500">Contact</a></li>
+    <li><a href="about.html" class="hover:text-gold-500">About Us</a></li>
+    <li>
+      <a href="#" class="mt-4 inline-block bg-[#C89438] hover:bg-[#b58028] text-white py-2 px-4 rounded transition-all duration-300">
+        Schedule a Tour
+      </a>
+    </li>
+  </ul>
+</div>
+  <!-- Hero -->
+  <section class="pt-3 pb-6 text-center px-6">
+    <h1 class="text-4xl font-bold text-primary">Schedule a Tour</h1>
+    <p class="text-base text-gray-700 max-w-2xl mx-auto mt-2">
+      Come see our warm, family-style home in Rosemount. Schedule a virtual or in-person tour below.
+    </p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 pb-12">
+    <!-- Left: Scheduler -->
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3M16 7V3M4 11h16M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
+          </svg>
+          Book Your Time
+        </h2>
+        <iframe
+          src="https://calendly.com/said-haille5"
+          class="w-full h-[500px] border border-primary rounded-lg"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Right: Info Block -->
+
+
+<!-- Right: Info Block -->
+
+<div class="bg-white p-6 rounded-xl shadow space-y-3">
+  <h2 class="text-xl font-semibold text-primary flex items-center gap-2">
+    <svg class="w-6 h-6 text-primary" viewBox="0 0 1024 1025" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+      <path d="M512 1025q-104 0-199-40.5t-163.5-109T40.5 712T0 513t40.5-199t109-163.5T313 41T512 0t199 41t163.5 109.5t109 163.5t40.5 199t-40.5 199t-109 163.5t-163.5 109t-199 40.5zm0-896q-104 0-192.5 51t-140 139.5t-51.5 193t51.5 193t140 140T512 897t192.5-51.5t140-140t51.5-193t-51.5-193t-140-139.5T512 129zm192 224L573 530q-5 20-22 33.5T512 577q-21 0-38-13t-23-32L256 289v-32h32l225 181l159-117h32v32z" />
+    </svg>
+    Visiting Hours
+  </h2>
+  <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
+  <p>Saturday: 10:00 AM – 1:00 PM</p>
+  <p>Sunday: Closed</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow space-y-3">
+  <h2 class="text-xl font-semibold text-primary flex items-center gap-2">
+    <svg class="w-6 h-6 text-primary" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+      <path d="M213.5 3q88.5 0 151 62.5T427 216t-62.5 150.5t-151 62.5t-151-62.5T0 216T62.5 65.5T213.5 3zM235 323V195h-43v128h43zm0-171v-43h-43v43h43z" />
+    </svg>
+    What to Expect
+  </h2>
+  <ul class="list-disc list-inside text-sm leading-relaxed">
+    <li>Tour lasts about 20–30 minutes</li>
+    <li>Meet our team and view all rooms</li>
+    <li>Learn about our services & support</li>
+    <li>Ask questions about CADI, EW, private pay</li>
+  </ul>
+</div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 bg-[#1D2B4F] text-white text-sm py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div><img src="images/mlogo.png" alt="Mosse Logo" class="w-16 mb-2" /></div>
+<div class="space-y-1 mt-4 md:mt-0">
+  <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
+  <p>
+    Phone:
+    <a href="tel:+16126364172" class="underline hover:text-[#C89438] transition-colors">
+      (612) 636-4172
+    </a>
+  </p>
+  <p>
+    Email:
+    <a href="mailto:mosseassisted@gmail.com" class="underline hover:text-[#C89438] transition-colors">
+      mosseassisted@gmail.com
+    </a>
+  </p>
+</div>
+    </div>
+  </footer>
+
+  <!-- Scroll Navbar Logic -->
+<script>
+  // ============================
+  // 🟦 NAVBAR + MOBILE MENU LOGIC
+  // ============================
+  const navBar = document.getElementById("navBar");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuToggle = document.getElementById("menuToggle");
+  
+  function toggleMenu() {
+    mobileMenu.classList.toggle("hidden");
+  }
+  
+  menuToggle.addEventListener("click", toggleMenu);
+  
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      navBar.classList.add("scrolled-nav");
+    } else {
+      navBar.classList.remove("scrolled-nav");
+    }
+    
+    if (!mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.toggle("scrolled-menu", window.scrollY > 10);
+    }
+  });
+  
+  // ============================
+  // 🟨 HERO SLIDESHOW LOGIC
+  // ============================
+  const slider = document.getElementById("slider");
+  const images = [
+    "images/1.jpeg",
+    "images/2.jpeg",
+    "images/3.jpeg",
+    "images/4.jpeg",
+    "images/5.jpeg",
+    "images/6.jpeg",
+    "images/7.jpeg",
+    "images/8.jpeg",
+    "images/9.jpeg",
+    "images/10.png",
+    "images/11.jpeg",
+    "images/12.jpeg",
+    "images/13.jpeg",
+  ];
+  
+  let index = 0;
+  
+  function showNextImage() {
+    slider.style.backgroundImage = `url('${images[index]}')`;
+    slider.style.opacity = 0;
+    setTimeout(() => {
+      slider.style.opacity = 1;
+    }, 200);
+    index = (index + 1) % images.length;
+  }
+  
+  showNextImage();
+  setInterval(showNextImage, 5000);
+  
+  // ============================
+  // 🟩 COLLAPSIBLE CARD LOGIC
+  // ============================
+  function toggleCard(card) {
+    const content = card.querySelector(".card-content");
+    const button = card.querySelector(".toggle-btn");
+    
+    const isExpanded = content.classList.contains("expanded");
+    
+    content.classList.toggle("expanded");
+    button.innerText = isExpanded ? "Show More" : "Show Less";
+  }
+  
+  // On load, collapse all
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".card-content").forEach((c) =>
+      c.classList.remove("expanded")
+    );
+  });
+</script>
+</body>
+</html>
