@@ -60,6 +60,31 @@
     .card-content.expanded {
       max-height: 500px;
     }
+details summary {
+  list-style: none;
+  position: relative;
+  padding-right: 1.75rem;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #b0b3ba; /* soft metallic silver */
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(-180deg);
+}
   </style>
 </head>
 
@@ -140,59 +165,64 @@
   <!-- HERO SECTION -->
   <section class="text-center mb-12">
     <h2 class="text-4xl text-[#1D2B4F] font-semibold mb-3">Frequently Asked Questions</h2>
-    <p class="text-lg text-gray-700">Everything you need to know about care, services, admissions, billing, and daily life at Mosse Assisted Living.</p>
+    <p class="text-lg text-gray-700 py-5">Everything you need to know about care, services, admissions, billing, and daily life at Mosse Assisted Living.</p>
   </section>
   
   <!-- COLLAPSIBLE FAQ GROUP -->
   <div class="space-y-8">
     
     <!-- GENERAL FACILITY QUESTIONS -->
-    <div>
-      <h3 class="text-2xl font-semibold text-[#1D2B4F] mb-4 border-b border-[#C89438] pb-2"> General Facility Questions</h3>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">1. What age group do you serve?</summary>
-        <p class="mt-2 text-gray-700">We specialize in serving adults aged 55–65. Our home is structured and licensed specifically for this age group under MDH regulations.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">2. Are you licensed by the Minnesota Department of Health (MDH)?</summary>
-        <p class="mt-2 text-gray-700">Yes. Mosse Assisted Living LLC is a licensed Basic Assisted Living facility under the Minnesota Department of Health.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">3. What is your staff-to-resident ratio?</summary>
-        <p class="mt-2 text-gray-700">We maintain a 1:1 staff-to-resident ratio during waking hours to ensure individualized attention and timely support.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">4. How many residents do you accept?</summary>
-        <p class="mt-2 text-gray-700">We are licensed for a maximum of 5 residents to maintain a quiet, personalized home setting.</p>
-      </details>
-      
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">6. Are pets allowed?</summary>
-        <p class="mt-2 text-gray-700">Unfortunately, we do not allow personal pets in the home.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">7. Can I schedule a tour?</summary>
-        <p class="mt-2 text-gray-700">Yes! Please use the "Schedule a Tour" button or contact us directly at (612) 636‑4172 to arrange a private walkthrough of the home.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">8. What’s included in your base rate?</summary>
-        <p class="mt-2 text-gray-700">Our base rate typically includes housing, meals, housekeeping, laundry, 24/7 staff availability, medication reminders, and delegated clinical oversight. Specific services are outlined in the client’s Service Agreement.</p>
-      </details>
-      
-      <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
-        <summary class="font-medium cursor-pointer">9. What makes you different from larger facilities or group homes?</summary>
-        <p class="mt-2 text-gray-700">We are a real residential home. We provide warmth, cultural understanding, 1:1 care, and compliance-driven excellence without the impersonal feel of large institutions.</p>
-      </details>
-      
-
-    </div>
+<!-- GENERAL FACILITY QUESTIONS -->
+<div>
+  <h3 class="text-2xl  text-[#1D2B4F] mb-4">General Facility Questions</h3>
+  
+  <div class="space-y-6">
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">1. What age group do you serve?</summary>
+      <p class="mt-2 text-gray-700">We specialize in serving adults aged 55–65. Our home is structured and licensed specifically for this age group under MDH regulations.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">2. Are you licensed by the Minnesota Department of Health (MDH)?</summary>
+      <p class="mt-2 text-gray-700">Yes. Mosse Assisted Living LLC is a licensed Basic Assisted Living facility under the Minnesota Department of Health.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">3. What is your staff-to-resident ratio?</summary>
+      <p class="mt-2 text-gray-700">We maintain a 1:1 staff-to-resident ratio during waking hours to ensure individualized attention and timely support.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">4. How many residents do you accept?</summary>
+      <p class="mt-2 text-gray-700">We are licensed for a maximum of 5 residents to maintain a quiet, personalized home setting.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">5. What types of rooms are available?</summary>
+      <p class="mt-2 text-gray-700">We offer private bedrooms with options for custom furnishing, personal décor, and safety features like grab bars and emergency access.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">6. Are pets allowed?</summary>
+      <p class="mt-2 text-gray-700">Unfortunately, we do not allow personal pets in the home.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">7. Can I schedule a tour?</summary>
+      <p class="mt-2 text-gray-700">Yes! Please use the "Schedule a Tour" button or contact us directly at (612) 636‑4172 to arrange a private walkthrough of the home.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">8. What’s included in your base rate?</summary>
+      <p class="mt-2 text-gray-700">Our base rate typically includes housing, meals, housekeeping, laundry, 24/7 staff availability, medication reminders, and delegated clinical oversight. Specific services are outlined in the client’s Service Agreement.</p>
+    </details>
+    
+    <details class="bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+      <summary class="font-medium cursor-pointer">9. What makes you different from larger facilities or group homes?</summary>
+      <p class="mt-2 text-gray-700">We are a real residential home. We provide warmth, cultural understanding, 1:1 care, and compliance-driven excellence without the impersonal feel of large institutions.</p>
+    </details>
+  </div>
+</div>
     </div>
 </main>
 
@@ -207,13 +237,13 @@
   <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
   <p>
     Phone:
-    <a href="tel:+16126364172" class=" hover:text-[#C89438] transition-colors">
+    <a href="tel:+16126364172" class="hover:text-[#C89438] transition-colors">
       (612) 636-4172
     </a>
   </p>
   <p>
     Email:
-    <a href="mailto:mosseassisted@gmail.com" class=" hover:text-[#C89438] transition-colors">
+    <a href="mailto:mosseassisted@gmail.com" class="hover:text-[#C89438] transition-colors">
       mosseassisted@gmail.com
     </a>
   </p>
