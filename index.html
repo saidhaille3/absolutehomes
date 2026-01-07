@@ -1,16 +1,16 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mosse Assisted Living | Rosemount, MN</title>
-  <meta name="description" content="Mosse Assisted Living – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
+  <meta name="description" content="Mosse Assisted  – Warm, MDH-licensed care for adults 55–65 in Minneapolis, MN" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Fonts -->
   <style>
+  
     body {
       font-family: 'Times New Roman', Times, serif;
       background-color: #F9F9F6;
@@ -27,10 +27,6 @@
   .nav-default {
     background-color: #1D2B4F; /* solid at top */
   }
-  .toggle-btn {
-  bottom: 1.75rem; /* lift it higher (adjust if needed) */
-  transform: translateY(-15%); /* vertical nudge */
-}
 
   .scrolled-nav {
     background-color: rgba(29, 43, 79, 0.85); /* slightly transparent on scroll */
@@ -38,6 +34,7 @@
     footer a {
   text-decoration: none;
 }
+
   }
  
   #mobileMenu.scrolled-menu {
@@ -57,7 +54,24 @@
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
+.card {
+  background: linear-gradient(135deg, #fefefe, #e4e4e7);
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dcdcdc;
+  transition: all 0.4s ease;
+}
 
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-color: #bcbcbc;
+}
 .card-content.expanded {
   max-height: 500px; /* adjust based on your content */
 }
@@ -79,8 +93,7 @@
 <!-- Right: Icons -->
 <div class="flex items-center space-x-6">
   <!-- 📞 Phone -->
-  <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<a href="tel:+16126364172" class="hover:text-[#C89438] focus:text-[#C89438] visited:text-[#C89438] active:text-[#C89438] transition-colors focus:outline-none">    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
     </svg>
@@ -98,8 +111,8 @@
 
   <!-- Logo Section -->
   <div class="text-center py-6">
-    <img src="images/mlogo.png" alt="Mosse Assisted Living Logo" class="mx-auto w-36">
-    <h1 class="text-3xl text-[#1D2B4F] mt-2">14399 Bayberry Circle, Rosemount, MN 55068</h1>
+    <img src="images/mlogo.png" alt="Mosse Assisted  Logo" class="mx-auto w-36">
+    <h1 class="text-3xl text-[#1D2B4F] mt-2">14399 Bayberry Circle, Rosemount, MN, 55068</h1>
   </div>
 
   <!-- Mobile Menu -->
@@ -115,7 +128,7 @@
 <!-- Phone & Email Icons (Match Top Nav) -->
 <div class="flex items-center space-x-6 pt-0.5">
   <!-- 📞 Phone -->
-<a href="tel:+16126364172" class="hover:text-[#C89438] focus:text-[#C89438] visited:text-[#C89438] active:text-[#C89438] transition-colors focus:outline-none">
+  <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
@@ -158,8 +171,8 @@
     
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6 z-10">
-      <h1 class="text-2xl md:text-4xl font-semibold drop-shadow-xl">Welcome to Mosse Assisted Living</h1>
-      <p class="mt-3 text-base md:text-lg max-w-xl drop-shadow-md">Warm, personalized, MDH-licensed care for adults 55–65 in Rosemount, MN</p>
+      <h1 class="text-2xl md:text-4xl font-semibold drop-shadow-xl">Welcome to Mosse Assisted Living </h1>
+      <p class="mt-3 text-base md:text-lg max-w-xl drop-shadow-md">Warm, personalized, MDH-licensed care for adults 55–65 in Minneapolis, MN</p>
       <a href="tour.html" class="mt-5 inline-block bg-[#C89438] hover:bg-[#b58028] text-white font-medium py-2.5 px-5 rounded-full transition-all duration-300">
         Schedule a Tour
       </a>
@@ -167,7 +180,7 @@
   </div>
 </div>
 
-<!-- Enhanced Services Section — 100/10 Cavern-Polished -->
+<!-- Enhanced Services Section -- 100/10 Cavern-Polished -->
 <!-- 🔥 WHAT WE PROVIDE – EXPANDABLE GRID VERSION -->
 <!-- WHAT WE PROVIDE – 3x3 GRID, SVG ICONS, COLLAPSIBLE -->
 <section class="mt-16 px-4 md:px-8 max-w-7xl mx-auto">
@@ -177,144 +190,300 @@
     
     <!-- CARD 1 -->
 <!-- CARD 1 with custom SVG icon -->
-<div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+<div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
   <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="#2ae1ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="url(#metallicAquaStroke)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <defs>
+    <linearGradient id="metallicAquaStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d5fcff" />
+      <stop offset="50%" stop-color="#2ae1ff" />
+      <stop offset="100%" stop-color="#106d8c" />
+    </linearGradient>
+  </defs>
   <path d="M4.5 10.5v-.25a1.75 1.75 0 1 1 3.5 0v.09c0 .427-.148.84-.42 1.17L4.5 15.25v.25h4m5-2h-4v-.25A8.931 8.931 0 0 0 11 8.296V8m2.5 5.5V10m0 3.5V16M16 8v4.75m0 0a1.75 1.75 0 1 1 3.5 0V16M16 12.75V16m-4 7.5C5.649 23.5.5 18.351.5 12S5.649.5 12 .5S23.5 5.649 23.5 12S18.351 23.5 12 23.5Z" />
 </svg>
-    <h3 class="text-xl text-[#1D2B4F]">24/7 Supervision</h3>
+    <h3 class="text-xl  text-[#1D2B4F]">24/7 Supervision</h3>
   </div>
   <p class="card-content text-gray-700 leading-relaxed collapsed">
     Awake staff provide around‑the‑clock support, ensuring every resident’s safety, dignity, and comfort day and night.
   </p>
-  <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+     <span class="arrow">▾</span>
+  </div>
+</button>
 </div>
     
     <!-- CARD 2 -->
     
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 512 512" fill="none" aria-hidden="true">
-      <path fill="#2E8B57" d="m445.588 56l-.026 384.352c6.881 11.323 14 15.677 19.97 15.648c5.924-.028 12.967-4.434 19.714-15.418L466.82 244.27l-.215-2.391l1.475-1.906c21.174-27.169 28.573-74.108 22.533-113.81c-3.02-19.852-9.342-37.82-18.195-50.522c-7.424-10.652-16.28-17.447-26.828-19.641h-.002zm-372.375.004l-.016 67.127l-12.56-.016V56.008H46.332l.002 67.11H33.756v-67.11h-14.57v103.228c-.001 11.417 6.23 17.748 16.04 21.662l4.06 1.622l-.09 4.37c-2 84.57-3.977 169.139-5.962 253.708C40.074 451.79 47.1 456.028 52.95 456c5.85-.028 12.87-4.377 19.623-15.432c-2.315-84.547-4.63-169.096-6.941-253.644l-.12-4.4l4.073-1.606c10.324-4.106 17.039-11.074 17.039-21.676V56.004h-13.41zM256 95A161 161 0 0 0 95 256a161 161 0 0 0 161 161a161 161 0 0 0 161-161A161 161 0 0 0 256 95z" />
-    </svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 512 512" fill="none" aria-hidden="true">
+  <defs>
+    <!-- Metallic Forest Gradient -->
+    <linearGradient id="metal-forest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a0d5b5" />
+      <stop offset="45%" stop-color="#2E8B57" />
+      <stop offset="100%" stop-color="#1a5d3a" />
+    </linearGradient>
+  </defs>
+  
+  <path fill="url(#metal-forest)" d="m445.588 56l-.026 384.352c6.881 11.323 14 15.677 19.97 15.648c5.924-.028 12.967-4.434 19.714-15.418L466.82 244.27l-.215-2.391l1.475-1.906c21.174-27.169 28.573-74.108 22.533-113.81c-3.02-19.852-9.342-37.82-18.195-50.522c-7.424-10.652-16.28-17.447-26.828-19.641h-.002zm-372.375.004l-.016 67.127l-12.56-.016V56.008H46.332l.002 67.11H33.756v-67.11h-14.57v103.228c-.001 11.417 6.23 17.748 16.04 21.662l4.06 1.622l-.09 4.37c-2 84.57-3.977 169.139-5.962 253.708C40.074 451.79 47.1 456.028 52.95 456c5.85-.028 12.87-4.377 19.623-15.432c-2.315-84.547-4.63-169.096-6.941-253.644l-.12-4.4l4.073-1.606c10.324-4.106 17.039-11.074 17.039-21.676V56.004h-13.41zM256 95A161 161 0 0 0 95 256a161 161 0 0 0 161 161a161 161 0 0 0 161-161A161 161 0 0 0 256 95z" />
+</svg>
         <h3 class="text-xl  text-[#1D2B4F]">Meals & Nutrition</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         Freshly prepared, heart‑healthy meals with cultural options, served with care, flavor, and warmth.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+    <span class="arrow">▾</span>
+  </div>
+</button>
     </div>
     
     <!-- CARD 3 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+  <defs>
+    <!-- Light Blue Metallic Gradient -->
+    <linearGradient id="metal-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6f1ff" />
+      <stop offset="40%" stop-color="#8fbffa" />
+      <stop offset="100%" stop-color="#5d95d6" />
+    </linearGradient>
+    
+    <!-- Deep Blue Metallic Gradient -->
+    <linearGradient id="metal-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d2e0ff" />
+      <stop offset="50%" stop-color="#4a73d9" />
+      <stop offset="100%" stop-color="#2859c5" />
+    </linearGradient>
+  </defs>
+  
   <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
-    <path fill="#8fbffa" d="M4.192 5.518c-.65 0-1.274.25-1.746.696a2.38 2.38 0 0 0-.002 3.448l4.207 4.09a.5.5 0 0 0 .697 0l4.208-4.09a2.38 2.38 0 0 0-.002-3.447a2.536 2.536 0 0 0-3.492 0l-.01.009L7 7.276L5.947 6.224l-.01-.01a2.54 2.54 0 0 0-1.745-.696" />
-    <path fill="#2859c5" d="M7 .107a2.315 2.315 0 1 0 0 4.63a2.315 2.315 0 0 0 0-4.63" />
+    <!-- Heart-Shaped Lower Symbol -->
+    <path fill="url(#metal-light)" d="M4.192 5.518c-.65 0-1.274.25-1.746.696a2.38 2.38 0 0 0-.002 3.448l4.207 4.09a.5.5 0 0 0 .697 0l4.208-4.09a2.38 2.38 0 0 0-.002-3.447a2.536 2.536 0 0 0-3.492 0l-.01.009L7 7.276L5.947 6.224l-.01-.01a2.54 2.54 0 0 0-1.745-.696" />
+    
+    <!-- Top Circle (Head or Identity Marker) -->
+    <path fill="url(#metal-dark)" d="M7 .107a2.315 2.315 0 1 0 0 4.63a2.315 2.315 0 0 0 0-4.63" />
   </g>
-</svg>
-        <h3 class="text-xl text-[#1D2B4F]">Behavioral Support</h3>
+</svg>        <h3 class="text-xl  text-[#1D2B4F]">Behavioral Support</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         Compassionate, CPI‑trained staff skilled in de‑escalation and emotional care to maintain calm, structured environments.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm ">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+     <span class="arrow">▾</span>
+  </div>
+</button>    </div>
     
     <!-- CARD 4 -->
 <!-- CARD 4 (On‑Call RN Oversight) with your nurse SVG -->
-<div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+<div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
   <div class="flex items-center space-x-4 mb-3">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 24" fill="none" aria-hidden="true">
-      <path fill="#C89FA5" d="M19.534 21.152a10.545 10.545 0 0 0-.51-3.901l.021.075c-.058-.172-.104-1.326-2.014-2.072c-1.406-.549-3.291-.454-4.688-1.406a2.203 2.203 0 0 1-.078-.311l-.002-.015a12.085 12.085 0 0 0 4.006-1.533l-.054.03c-2.012-.572-2.16-3.784-2.301-5.76c0-.558-.111-1.09-.312-1.575l.01.027a4.17 4.17 0 0 1-.03-.118L14.758.001H4.796l1.172 4.595c-.01.033-.018.07-.03.117a4.043 4.043 0 0 0-.302 1.547c-.142 2.022-.302 5.188-2.301 5.76a11.887 11.887 0 0 0 3.873 1.49l.076.012c-.024.13-.052.239-.086.346l.006-.02c-1.396.952-3.28.855-4.688 1.406C.607 16 .562 17.154.504 17.326c-.321.962-.506 2.07-.506 3.221c0 .213.006.424.019.634l-.001-.029c-.01.368 0 .923 1.101 1.406c3.261 1.429 8.64 1.44 8.661 1.44a27.858 27.858 0 0 0 8.857-1.498l-.196.058c1.098-.483 1.105-1.038 1.098-1.409zM13.807.738l-.975 3.834H6.709L5.734.738z" />
-      <path fill="#ffcc02" d="M8.234 3.063h1.077v1.079h.919V3.063h1.079v-.917h-1.083V1.071h-.919V2.15H8.234z" />
-    </svg>
-    <h3 class="text-xl text-[#1D2B4F]">On‑Call RN Oversight</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+  <defs>
+    <!-- Mauve Metallic Base -->
+    <linearGradient id="mauve-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e9eb" />
+      <stop offset="40%" stop-color="#c89fa5" />
+      <stop offset="100%" stop-color="#9a6d73" />
+    </linearGradient>
+    
+    <!-- Golden Cross Glow -->
+    <linearGradient id="gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7d1" />
+      <stop offset="50%" stop-color="#ffcc02" />
+      <stop offset="100%" stop-color="#c89f02" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Body with Mauve Metallic Gradient -->
+  <path fill="url(#mauve-metallic)" d="M19.534 21.152a10.545 10.545 0 0 0-.51-3.901l.021.075c-.058-.172-.104-1.326-2.014-2.072c-1.406-.549-3.291-.454-4.688-1.406a2.203 2.203 0 0 1-.078-.311l-.002-.015a12.085 12.085 0 0 0 4.006-1.533l-.054.03c-2.012-.572-2.16-3.784-2.301-5.76c0-.558-.111-1.09-.312-1.575l.01.027a4.17 4.17 0 0 1-.03-.118L14.758.001H4.796l1.172 4.595c-.01.033-.018.07-.03.117a4.043 4.043 0 0 0-.302 1.547c-.142 2.022-.302 5.188-2.301 5.76a11.887 11.887 0 0 0 3.873 1.49l.076.012c-.024.13-.052.239-.086.346l.006-.02c-1.396.952-3.28.855-4.688 1.406C.607 16 .562 17.154.504 17.326c-.321.962-.506 2.07-.506 3.221c0 .213.006.424.019.634l-.001-.029c-.01.368 0 .923 1.101 1.406c3.261 1.429 8.64 1.44 8.661 1.44a27.858 27.858 0 0 0 8.857-1.498l-.196.058c1.098-.483 1.105-1.038 1.098-1.409zM13.807.738l-.975 3.834H6.709L5.734.738z" />
+  
+  <!-- Cross Symbol with Soft Metallic Gold -->
+  <path fill="url(#gold-metallic)" d="M8.234 3.063h1.077v1.079h.919V3.063h1.079v-.917h-1.083V1.071h-.919V2.15H8.234z" />
+</svg>
+    <h3 class="text-xl  text-[#1D2B4F]">On‑Call RN Oversight</h3>
   </div>
   <p class="card-content text-gray-700 leading-relaxed collapsed">
     All care plans reviewed by licensed RNs, ensuring safe delegation, consistent monitoring, and compliance with MDH standards.
   </p>
-  <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
-</div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+     <span class="arrow">▾</span>
+  </div>
+</button></div>
     
     <!-- CARD 5 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 128 128" fill="none" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 128 128" fill="none" aria-hidden="true">
   <path fill="#8E24AA" d="M116 4H12c-4.42 0-8 3.58-8 8v104c0 4.42 3.58 8 8 8h104c4.42 0 8-3.58 8-8V12c0-4.42-3.58-8-8-8z" />
   <path fill="#AB47BC" d="M109.7 4H11.5A7.555 7.555 0 0 0 4 11.5v97.9c-.01 4.14 3.34 7.49 7.48 7.5h98.12c4.14.01 7.49-3.34 7.5-7.48V11.5c.09-4.05-3.13-7.41-7.18-7.5h-.22z" />
   <path fill="#FAFAFA" d="M19 33.6a2.994 2.994 0 0 1-2.93-3.06c.03-1.34.94-2.49 2.23-2.84l42.1-11.3c2.4-.6 4.9-.6 7.3 0l42.1 11.3a3 3 0 0 1 2.58 3.37a3 3 0 0 1-3.98 2.43L66.2 22.3c-1.44-.4-2.96-.4-4.4 0L19.7 33.5c-.22.08-.46.12-.7.1z" />
   <path fill="#FAFAFA" d="M63.2 52a9 9 0 1 0 0-18a9 9 0 0 0 0 18z" />
 </svg>
-        <h3 class="text-xl text-[#1D2B4F]">Cultural & Faith Sensitivity</h3>
+        <h3 class="text-xl  text-[#1D2B4F]">Cultural & Faith Sensitivity</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         We honor residents’ beliefs and traditions, from dietary and prayer accommodations , and multilingual care.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+   <span class="arrow">▾</span>
+  </div>
+</button>    </div>
     
     <!-- CARD 6 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 1472 1536" fill="#000b5d" aria-hidden="true">
-  <path d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72z" />
-</svg>
-        <h3 class="text-xl text-[#1D2B4F]">Nighttime Safety Checks</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 1472 1536" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="navyMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7cbd6" />
+      <stop offset="35%" stop-color="#6f7c9d" />
+      <stop offset="70%" stop-color="#1b254b" />
+      <stop offset="100%" stop-color="#000b5d" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#navyMetallic)" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72z" />
+</svg>        <h3 class="text-xl  text-[#1D2B4F]">Nighttime Safety Checks</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         Discreet overnight rounds ensure residents are safe, comfortable, and supported through the night.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+    <span class="arrow">▾</span>
+  </div>
+</button>    </div>
     
     <!-- CARD 7 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 64 64" fill="red" aria-hidden="true">
-  <path d="M27.83 32.711v-.01c.605-.236 1.004-.757 1.004-1.741c0-1.401-.911-2.036-2.304-2.036c-.666 0-1.269.02-1.916.092v6.786h1.322V33.12h.686c.174 0 .215.092.266.286l.627 2.395h1.381l-.83-2.774c-.041-.172-.092-.275-.236-.316zm-1.157-.646h-.737v-2.067c.216-.02.43-.031.644-.031c.79 0 .953.471.953 1.074c0 .717-.255 1.024-.86 1.024zm10.253.749h1.795v-1.096h-1.795v-1.637h1.99v-1.106h-3.309v6.827h3.39v-1.076h-2.071zm-26.44 0h1.793v-1.096h-1.793v-1.637h1.987v-1.106H9.165v6.827h3.391v-1.076h-2.069zm10.972 0h1.795v-1.096h-1.795v-1.637h1.989v-1.106h-3.309v6.827h3.39v-1.076h-2.07zm-5.235-1.25l-1.342-2.589h-1.239v6.827h1.291v-4.411l1.291 2.589l1.28-2.599h.041v4.421h1.239v-6.827h-1.239zm16.116 1.545h.93v.245c0 .708-.102 1.506-.982 1.506c-1.147 0-1.177-1.627-1.177-2.466c0-.831.083-2.406 1.219-2.406c.532 0 .788.296 1.084.664l.728-.973c-.524-.52-1.066-.819-1.793-.819c-1.935 0-2.623 1.843-2.623 3.541c0 1.68.626 3.512 2.521 3.512c1.852 0 2.222-1.608 2.222-3.092v-.797h-2.13v1.084zm20.1 2.693h1.312v-2.61l1.731-4.218h-1.343l-1.034 3.111l-1.035-3.111h-1.414l1.784 4.289zm-12.355 0h1.291v-4.216h.031l2.192 4.216h1.157v-6.827h-1.28v4.042h-.019l-2.091-4.043h-1.28z" />
-  <path d="M55.653.826H8.298C4.232.826.425 4.641.425 8.706v47.342c0 4.067 3.822 7.901 7.89 7.901h47.34c4.066 0 7.895-3.814 7.895-7.88V8.712c0-4.065-3.829-7.885-7.897-7.885zm1.611 39.984h-16.85v16.833H23.565V40.81H6.71V23.965h16.855V7.132h16.849v16.833h16.85V40.81z" />
-  <path d="M48.464 35.914c.839.001 1.495-.389 1.947-.942l-.676-.963c-.338.45-.643.788-1.199.788c-1.065 0-1.251-1.483-1.251-2.404c0-1.229.287-2.406 1.221-2.406c.503 0 .78.337 1.075.789l.79-.933c-.525-.623-1.047-.983-1.845-.983c-1.895 0-2.623 1.781-2.623 3.533c0 1.853.676 3.521 2.561 3.521z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" aria-hidden="true">
+  <defs>
+    <linearGradient id="redMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5a5f" />
+      <stop offset="40%" stop-color="#d62d2d" />
+      <stop offset="100%" stop-color="#b1181c" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="url(#redMetal)" />
+  <path d="M28 24h8v6h6v8h-6v6h-8v-6h-6v-8h6v-6z" fill="white" />
 </svg>
         <h3 class="text-xl  text-[#1D2B4F]">Emergency Preparedness</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         Equipped with backup power, evacuation routes, and trained staff for any weather or medical crisis.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+     <span class="arrow">▾</span>
+  </div>
+</button>    </div>
     
     <!-- CARD 8 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="#64B5F6" aria-hidden="true">
-  <path d="m10.2 13.2l-1.05-1.05q.2-.275.275-.563T9.5 11q0-.3-.075-.588t-.275-.537L10.2 8.8q.4.475.6 1.05T11 11q0 .575-.2 1.138t-.6 1.062Zm2.125 2.15l-1.075-1.075q.625-.7.938-1.55T12.5 11q0-.875-.312-1.712T11.25 7.75l1.075-1.075q.85.925 1.263 2.038T14 11q0 1.175-.413 2.3t-1.262 2.05ZM5 12q-.825 0-1.413-.588T3 10q0-.825.588-1.413T5 8q.825 0 1.413.588T7 10q0 .825-.588 1.413T5 12Zm-4 4v-.575q0-.6.325-1.1t.9-.75q.65-.275 1.338-.425T5 13q.75 0 1.438.15t1.337.425q.575.25.9.75t.325 1.1V16H1Zm18-4q-.825 0-1.413-.588T17 10q0-.825.588-1.413T19 8q.825 0 1.413.588T21 10q0 .825-.588 1.413T19 12Zm-4 4v-.575q0-.6.325-1.1t.9-.75q.65-.275 1.337-.425T19 13q.75 0 1.437.15t1.338.425q.575.25.9.75t.325 1.1V16h-8Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" aria-hidden="true">
+  <defs>
+    <linearGradient id="blueMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b3d9ff" />
+      <stop offset="40%" stop-color="#64b5f6" />
+      <stop offset="100%" stop-color="#3b83bd" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#blueMetal)" d="m10.2 13.2l-1.05-1.05q.2-.275.275-.563T9.5 11q0-.3-.075-.588t-.275-.537L10.2 8.8q.4.475.6 1.05T11 11q0 .575-.2 1.138t-.6 1.062Zm2.125 2.15l-1.075-1.075q.625-.7.938-1.55T12.5 11q0-.875-.312-1.712T11.25 7.75l1.075-1.075q.85.925 1.263 2.038T14 11q0 1.175-.413 2.3t-1.262 2.05ZM5 12q-.825 0-1.413-.588T3 10q0-.825.588-1.413T5 8q.825 0 1.413.588T7 10q0 .825-.588 1.413T5 12Zm-4 4v-.575q0-.6.325-1.1t.9-.75q.65-.275 1.338-.425T5 13q.75 0 1.438.15t1.337.425q.575.25.9.75t.325 1.1V16H1Zm18-4q-.825 0-1.413-.588T17 10q0-.825.588-1.413T19 8q.825 0 1.413.588T21 10q0 .825-.588 1.413T19 12Zm-4 4v-.575q0-.6.325-1.1t.9-.75q.65-.275 1.337-.425T19 13q.75 0 1.437.15t1.338.425q.575.25.9.75t.325 1.1V16h-8Z" />
 </svg>
-        <h3 class="text-xl text-[#1D2B4F]">Family Communication</h3>
+        <h3 class="text-xl  text-[#1D2B4F]">Family Communication</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         We keep families informed through transparent updates, progress reports, and open collaboration.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+     <span class="arrow">▾</span>
+  </div>
+</button>    </div>
     
     <!-- CARD 9 -->
-    <div class="card bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
+    <div class="card self-start bg-white p-6 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 relative cursor-pointer" onclick="toggleCard(this)">
       <div class="flex items-center space-x-4 mb-3">
 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 512 512" fill="none" aria-hidden="true">
-  <path fill="gold
-" fill-rule="evenodd" d="M234.667 42.667c41.237 0 74.667 33.429 74.667 74.666c0 39.863-31.238 72.43-70.57 74.556l-4.097.111C193.43 192 160 158.571 160 117.333c0-39.862 31.238-72.43 70.57-74.556zm-149.334 384h187.791A127.2 127.2 0 0 1 257.77 384H128v-34.133l.111-4.142c2.057-38.365 32.515-68.392 69.222-68.392H272l3.908.114c3.809.223 7.54.769 11.168 1.612a128.5 128.5 0 0 1 38.566-30.345c-15.93-8.956-34.208-14.047-53.642-14.047h-74.667l-4.616.096c-59.715 2.49-107.384 53.071-107.384 115.104zm117.334-309.334c0-17.673 14.327-32 32-32s32 14.327 32 32s-14.327 32-32 32s-32-14.327-32-32m118.636 331.629L384 410.667l62.697 38.295l-17.046-71.463l55.795-47.794l-73.232-5.871L384 256l-28.214 67.834l-73.232 5.871l55.795 47.794z" clip-rule="evenodd" />
-</svg>
-        <h3 class="text-xl text-[#1D2B4F]">Personalized Comfort</h3>
+  <defs>
+    <linearGradient id="goldMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7d1" />
+      <stop offset="30%" stop-color="#f9d976" />
+      <stop offset="70%" stop-color="#e4b300" />
+      <stop offset="100%" stop-color="#b28b00" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#goldMetal)" fill-rule="evenodd" d="M234.667 42.667c41.237 0 74.667 33.429 74.667 74.666c0 39.863-31.238 72.43-70.57 74.556l-4.097.111C193.43 192 160 158.571 160 117.333c0-39.862 31.238-72.43 70.57-74.556zm-149.334 384h187.791A127.2 127.2 0 0 1 257.77 384H128v-34.133l.111-4.142c2.057-38.365 32.515-68.392 69.222-68.392H272l3.908.114c3.809.223 7.54.769 11.168 1.612a128.5 128.5 0 0 1 38.566-30.345c-15.93-8.956-34.208-14.047-53.642-14.047h-74.667l-4.616.096c-59.715 2.49-107.384 53.071-107.384 115.104zm117.334-309.334c0-17.673 14.327-32 32-32s32 14.327 32 32s-14.327 32-32 32s-32-14.327-32-32m118.636 331.629L384 410.667l62.697 38.295l-17.046-71.463l55.795-47.794l-73.232-5.871L384 256l-28.214 67.834l-73.232 5.871l55.795 47.794z" clip-rule="evenodd" />
+</svg>        <h3 class="text-xl  text-[#1D2B4F]">Personalized Comfort</h3>
       </div>
       <p class="card-content text-gray-700 leading-relaxed collapsed">
         Residents are encouraged to personalize their spaces, bringing warmth, familiarity, and a true sense of home.
       </p>
-      <button class="toggle-btn absolute bottom-4 right-6 text-[#C89438] text-sm ">Show More</button>
-    </div>
+<button class="toggle-btn group absolute bottom-4 right-6 text-sm font-medium text-[#1D2B4F] transition-all duration-300 hover:text-[#C89438]">
+  <div class="hidden md:flex items-center space-x-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+  <div class="md:hidden">
+    <span class="arrow">▾</span>
+  </div>
+</button>    </div>
   </div>
 </section>
+
+
+
 
 
 
@@ -340,29 +509,31 @@
     </iframe>
   </div>
 </section>
-  <!-- Footer -->
-  <footer class="bg-[#1D2B4F] text-white text-sm py-6 mt-12">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <img src="images/mlogo.png" class="w-16 mb-2" alt="Mosse Logo">
+<footer class="bg-[#1D2B4F] text-white text-sm py-6 mt-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col items-center space-y-4 text-center md:flex-row md:justify-center md:space-y-0 md:space-x-10 md:text-left md:items-start">
+      
+      <!-- Logo -->
+      <div class="shrink-0">
+        <img src="images/mlogo.png" class="w-24 md:w-28" alt="Dreamcare Logo">
       </div>
-<div class="space-y-1 mt-4 md:mt-0">
-  <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
-  <p>
-    Phone:
-    <a href="tel:+16126364172" class=" hover:text-[#C89438] transition-colors">
-      (612) 636-4172
-    </a>
-  </p>
-  <p>
-    Email:
-    <a href="mailto:mosseassisted@gmail.com" class=" hover:text-[#C89438] transition-colors">
-      mosseassisted@gmail.com
-    </a>
-  </p>
-</div>
+      
+      <!-- Contact Info -->
+      <div class="space-y-1">
+        <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
+        <p>
+          Phone:
+          <a href="tel:+16126364172" class="hover:text-[#C89438] transition-colors">(612) 636-4172</a>
+        </p>
+        <p>
+          Email:
+          <a href="mailto:mosseassisted@gmail.com" class="hover:text-[#C89438] transition-colors">mosseassisted@gmail.com</a>
+        </p>
+      </div>
+      
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
 <script>
@@ -428,16 +599,17 @@
   // ============================
   // 🟩 COLLAPSIBLE CARD LOGIC
   // ============================
-  function toggleCard(card) {
-    const content = card.querySelector(".card-content");
-    const button = card.querySelector(".toggle-btn");
-    
-    const isExpanded = content.classList.contains("expanded");
-    
-    content.classList.toggle("expanded");
-    button.innerText = isExpanded ? "Show More" : "Show Less";
-  }
+function toggleCard(card) {
+  const content = card.querySelector(".card-content");
+  const label = card.querySelector(".toggle-btn .label");
+  const arrow = card.querySelector(".toggle-btn .arrow-icon");
   
+  const isExpanded = content.classList.contains("expanded");
+  
+  content.classList.toggle("expanded");
+  label.textContent = isExpanded ? "Show More" : "Show Less";
+  arrow.classList.toggle("rotate-90", !isExpanded);
+}  
   // On load, collapse all
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".card-content").forEach((c) =>
