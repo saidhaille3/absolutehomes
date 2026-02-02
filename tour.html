@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosse Home Care LLC | Rosemount, MN</title>
-  <meta name="description" content="Mosse Home Care – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
-
+  <title>Private Tour | Mosse Home Care LLC</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #FDFDFB; /* Premium gallery white */
+      color: #1D2B4F;
+      margin: 0;
+      overflow-x: hidden;
+    }
+  
     body {
       font-family: 'Times New Roman', Times, serif;
       background-color: #F9F9F6;
@@ -19,23 +25,72 @@
     .nav-default { background-color: #1D2B4F; transition: all 0.3s ease; }
     .scrolled-nav { background-color: rgba(29, 43, 79, 0.95); backdrop-filter: blur(8px); }
 
-    #slider {
-      background-size: contain !important;
-      background-repeat: no-repeat !important;
-      background-position: center center !important;
-      transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+
+
+    /* --- ARCHITECTURAL NAVIGATION --- */
+
+
+
+
+    /* --- BRANDING HEADER --- */
+    .brand-header {
+      text-align: center;
+      padding: 5rem 1rem 4rem;
+      background: white;
+      border-bottom: 1px solid rgba(29, 43, 79, 0.05);
     }
 
-    .card-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-in-out;
+    .main-logo {
+      width: 200px;
+      margin: 0 auto 2.5rem;
+      display: block;
     }
-    .card-content.expanded { max-height: 500px; }
+
+    /* --- ELITE BODY COMPONENTS --- */
+    .booking-suite {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 50px 100px -20px rgba(29, 43, 79, 0.08);
+      border: 1px solid rgba(29, 43, 79, 0.05);
+      overflow: hidden;
+    }
+
+    .info-panel {
+      background: white;
+      padding: 4rem;
+      border: 1px solid rgba(29, 43, 79, 0.05);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .info-panel:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 60px -12px rgba(29, 43, 79, 0.1);
+      border-color: #C89438;
+    }
+
+    .gold-accent-line {
+      width: 40px;
+      height: 1px;
+      background: #C89438;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #C89438;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* Hide scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #1D2B4F; }
   </style>
 </head>
-<body class="text-gray-800">
-
+<body>
   <nav id="navBar" class="nav-default text-white sticky top-0 z-50 px-4 md:px-8 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       
@@ -81,98 +136,102 @@
       <li><a href="faq.html" onclick="toggleMenu()">FAQs</a></li>
       <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
       <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
-      <li><a href="#" class="inline-block bg-[#C89438] text-center w-full py-4 rounded">Schedule a Tour</a></li>
     </ul>
   </div>
 
-  <header class="text-center py-8 md:py-12">
-    <img src="images/mlogo.png" alt="Mosse Home Care Logo" class="mx-auto w-32 md:w-44">
+
+  <header class="brand-header">
+    <img src="images/mlogo.png" alt="Mosse Home Care" class="main-logo">
+    <span class="section-label">Experience Excellence</span>
+    <h1 class="text-5xl md:text-7xl font-serif text-[#1D2B4F] mb-6">Schedule Your Visit</h1>
+    <p class="max-w-2xl mx-auto text-lg opacity-60 font-light leading-relaxed">
+      Discover a residence where talent meets tranquility. We invite you to experience the refined care and architectural warmth of our Rosemount sanctuary.
+    </p>
   </header>
 
-  <section class="px-6 pb-10 text-center">
-    <h1 class="text-3xl md:text-5xl font-bold text-[#1D2B4F]">Schedule a Tour</h1>
-    <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-      Come see our warm, family-style home in Rosemount. Schedule a virtual or in-person tour below.
-    </p>
-  </section>
-
-  <main class="max-w-7xl mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-12 pb-20">
-    
-    <div class="w-full">
-      <div class="bg-white p-4 md:p-6 rounded-2xl shadow-xl border border-gray-100">
-        <div class="flex items-center gap-3 mb-6">
-          <svg class="w-8 h-8 text-[#1D2B4F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3M16 7V3M4 11h16M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
-          </svg>
-          <h2 class="text-xl md:text-2xl font-bold text-[#1D2B4F]">Select a Time</h2>
-        </div>
-        <iframe
-          src="https://calendly.com/said-haille5"
-          class="w-full h-[500px] md:h-[600px] rounded-lg"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-8">
-      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-[#C89438]">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="p-3 bg-blue-50 rounded-xl">
-            <svg class="w-8 h-8 text-[#1D2B4F]" viewBox="0 0 1024 1025" fill="currentColor">
-              <path d="M512 1025q-104 0-199-40.5t-163.5-109T40.5 712T0 513t40.5-199t109-163.5T313 41T512 0t199 41t163.5 109.5t109 163.5t40.5 199t-40.5 199t-109 163.5t-163.5 109t-199 40.5zm0-896q-104 0-192.5 51t-140 139.5t-51.5 193t51.5 193t140 140T512 897t192.5-51.5t140-140t51.5-193t-51.5-193t-140-139.5T512 129zm192 224L573 530q-5 20-22 33.5T512 577q-21 0-38-13t-23-32L256 289v-32h32l225 181l159-117h32v32z" />
-            </svg>
+  <main class="max-w-[1500px] mx-auto px-6 py-24">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+      
+      <div class="lg:col-span-7">
+        <div class="booking-suite">
+          <div class="bg-[#1D2B4F] text-white p-8 flex justify-between items-center">
+            <div>
+              <h2 class="text-2xl font-serif">Private Tour</h2>
+              <p class="text-[10px] uppercase tracking-[0.3em] opacity-50 mt-1">Availability</p>
+            </div>
+            <svg class="w-8 h-8 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3M16 7V3M4 11h16M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" /></svg>
           </div>
-          <h2 class="text-2xl font-bold text-[#1D2B4F]">Visiting Hours</h2>
-        </div>
-        <div class="space-y-4 text-lg">
-          <div class="flex justify-between border-b pb-2"><span>Mon–Fri</span><span class="font-semibold">9:00 AM – 5:00 PM</span></div>
-          <div class="flex justify-between border-b pb-2"><span>Saturday</span><span class="font-semibold">10:00 AM – 1:00 PM</span></div>
-          <div class="flex justify-between text-red-600"><span>Sunday</span><span class="font-bold tracking-wide">Closed</span></div>
+          <iframe
+            src="https://calendly.com/said-haille5"
+            class="w-full h-[700px]"
+            frameborder="0">
+          </iframe>
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-[#C89438]">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="p-3 bg-blue-50 rounded-xl">
-            <svg class="w-8 h-8 text-[#1D2B4F]" viewBox="0 0 432 432" fill="currentColor">
-              <path d="M213.5 3q88.5 0 151 62.5T427 216t-62.5 150.5t-151 62.5t-151-62.5T0 216T62.5 65.5T213.5 3zM235 323V195h-43v128h43zm0-171v-43h-43v43h43z" />
-            </svg>
+      <div class="lg:col-span-5 space-y-8">
+        
+        <div class="info-panel">
+          <div class="gold-accent-line"></div>
+          <h2 class="text-3xl font-serif mb-8 italic">Visiting Hours</h2>
+          <div class="space-y-6">
+            <div class="flex justify-between items-end border-b border-gray-100 pb-4">
+              <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Weekdays</span>
+              <span class="text-lg font-serif">9:00 AM -- 5:00 PM</span>
+            </div>
+            <div class="flex justify-between items-end border-b border-gray-100 pb-4">
+              <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Saturdays</span>
+              <span class="text-lg font-serif">10:00 AM -- 4:00 PM</span>
+            </div>
+            <div class="flex justify-between items-end opacity-40">
+              <span class="text-[10px] uppercase tracking-widest font-bold">Sundays</span>
+              <span class="text-lg font-serif">By Appointment</span>
+            </div>
           </div>
-          <h2 class="text-2xl font-bold text-[#1D2B4F]">What to Expect</h2>
         </div>
-        <ul class="space-y-4 text-gray-700">
-          <li class="flex items-center gap-3">
-            <span class="text-[#C89438] text-xl font-bold">✓</span>
-            <span>Tour lasts about <strong>20–30 minutes</strong></span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="text-[#C89438] text-xl font-bold">✓</span>
-            <span>Meet our team and view all resident rooms</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="text-[#C89438] text-xl font-bold">✓</span>
-            <span>Learn about our services & support</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="text-[#C89438] text-xl font-bold">✓</span>
-            <span>Ask about <strong>CADI, EW, and Private Pay</strong></span>
-          </li>
-        </ul>
+
+        <div class="info-panel">
+          <div class="gold-accent-line"></div>
+          <h2 class="text-3xl font-serif mb-8 italic">What to Expect</h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-5">
+              <span class="text-[#C89438] text-xs font-bold">01</span>
+              <div>
+                <p class="font-bold text-sm uppercase tracking-wider mb-1">Tailored Walkthrough</p>
+                <p class="text-sm opacity-60 leading-relaxed">A curated 30-minute exploration of our suites and communal living spaces.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-5">
+              <span class="text-[#C89438] text-xs font-bold">02</span>
+              <div>
+                <p class="font-bold text-sm uppercase tracking-wider mb-1">Clinical Insight</p>
+                <p class="text-sm opacity-60 leading-relaxed">Meet our lead talents and discuss personalized care plans and RN oversight.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-5">
+              <span class="text-[#C89438] text-xs font-bold">03</span>
+              <div>
+                <p class="font-bold text-sm uppercase tracking-wider mb-1">Financial Consultation</p>
+                <p class="text-sm opacity-60 leading-relaxed">Detailed briefing on Waiver and Private Pay structures.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </main>
-
   <footer class="bg-[#1D2B4F] text-white py-12">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
       <img src="images/mlogo.png" alt="Mosse Logo" class="w-24" />
       <div class="text-center md:text-right space-y-2 text-sm md:text-base opacity-90">
         <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
-        <p>Phone: <a href="tel:+16126364172" class="hover:text-[#C89438] underline decoration-[#C89438] underline-offset-4">(612) 636-4172</a></p>
+        <p>Phone: <a href="tel:+16126364172" class="hover:text-[#C89438]underline-offset-4">(612) 636-4172</a></p>
         <p>Email: <a href="mailto:mosseassisted@gmail.com" class="hover:text-[#C89438]">mosseassisted@gmail.com</a></p>
       </div>
     </div>
   </footer>
+
 
   <script>
     const navBar = document.getElementById("navBar");
@@ -193,22 +252,22 @@
         navBar.classList.remove("scrolled-nav");
       }
     });
-
+    
     // Slideshow Logic
     const images = ["images/1.jpeg", "images/2.jpeg", "images/3.jpeg", "images/4.jpeg", "images/5.jpeg"];
     let index = 0;
     const slider = document.getElementById("slider");
     
     function showNextImage() {
-      if(!slider) return;
+      if (!slider) return;
       slider.style.backgroundImage = `url('${images[index]}')`;
       index = (index + 1) % images.length;
     }
-    if(slider) {
+    if (slider) {
       showNextImage();
       setInterval(showNextImage, 5000);
     }
-
+    
     // Collapsible Logic
     function toggleCard(card) {
       const content = card.querySelector(".card-content");
@@ -217,3 +276,6 @@
   </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
