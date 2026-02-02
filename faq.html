@@ -1,308 +1,234 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosse Home Care LLC | Rosemount, MN</title>
-  <meta name="description" content="Mosse Home Care – Warm, MDH-licensed care for adults 55–65 in Rosemount, MN" />
+  <title>FAQs | Mosse Home Care LLC</title>
+  <meta name="description" content="Frequently Asked Questions about Mosse Home Care in Rosemount, MN." />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
   <style>
-  details.faq-metal {
-  background: linear-gradient(135deg, #f4f4f4, #e6e6e6);
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
-    0 3px 8px rgba(0, 0, 0, 0.15);
-  padding: 1rem 1.25rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-details.faq-metal[open] {
-  background: linear-gradient(135deg, #f8f8f8, #dcdcdc);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.05),
-    0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-details.faq-metal summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: #2d2d2d;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
-}
-
-details.faq-metal summary::marker {
-  display: none;
-}
-
-details.faq-metal p {
-  margin-top: 0.75rem;
-  color: #555;
-  font-size: 0.975rem;
-  line-height: 1.6;
-}
     body {
       font-family: 'Times New Roman', Times, serif;
-      background-color: #F9F9F6;
-      overflow-x: hidden;
-    }
-    h1, h2, h3 {
-      font-family: 'Times New Roman', Times, serif;
+      background-color: #FDFDFB;
+      scroll-behavior: smooth;
     }
 
-    /* Transparent nav effect on scroll */
-    .scrolled-nav {
-      background-color: rgba(29, 43, 79, 0.9);
-      transition: background-color 0.3s ease;
-    }
+    /* Premium Navigation Transition */
     .nav-default {
-      background-color: #1D2B4F; /* solid at top */
+      background-color: #1D2B4F;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .scrolled-nav {
-      background-color: rgba(29, 43, 79, 0.85); /* slightly transparent on scroll */
-      backdrop-filter: blur(4px);
-      footer a {
-  text-decoration: none;
-}
+      background-color: rgba(29, 43, 79, 0.95);
+      backdrop-filter: blur(12px);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
     }
 
-    #mobileMenu.scrolled-menu {
-      background-color: rgba(29, 43, 79, 0.85); /* Transparent on scroll */
-      backdrop-filter: blur(6px);
+    /* FAQ Metallic Styling */
+    details.faq-metal {
+      background: linear-gradient(135deg, #f4f4f4, #e6e6e6);
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 3px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.25rem;
+      transition: all 0.3s ease;
+      margin-bottom: 1rem;
     }
 
-    #slider {
-      background-size: contain !important;
-      background-repeat: no-repeat !important;
-      background-position: center center !important;
-      transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+    details.faq-metal[open] {
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     }
 
-    .card-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-in-out;
+    details summary {
+      list-style: none;
+      position: relative;
+      padding-right: 2rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #1D2B4F;
     }
 
-    .card-content.expanded {
-      max-height: 500px;
+    details summary::-webkit-details-marker { display: none; }
+
+    details summary::after {
+      content: "▾";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+      color: #C89438;
+      font-size: 1.2rem;
     }
-details summary {
-  list-style: none;
-  position: relative;
-  padding-right: 1.75rem;
-}
 
-details summary::-webkit-details-marker {
-  display: none;
-}
+    details[open] summary::after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
 
-details summary::after {
-  content: "▾";
-  position: absolute;
-  right: 0;
-  top: 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #b0b3ba; /* soft metallic silver */
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-details[open] summary::after {
-  transform: rotate(-180deg);
-}
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
-<body class="text-gray-800 overflow-x-hidden">
+<body class="text-gray-900 overflow-x-hidden">
 
-  <!-- Utility Bar -->
-  <div id="navBar" class="nav-default text-white flex justify-between items-center px-6 py-4 text-lg sticky top-0 z-50 transition-colors duration-300">
-    <!-- Left: Menu -->
-    <button id="menuToggle" class="focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hover:text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-    <!-- Right: Icons -->
-    <div class="flex items-center space-x-6">
-      <!-- 📞 Phone -->
-      <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+  <nav id="navBar" class="nav-default text-white sticky top-0 z-50 px-6 py-5">
+    <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+      
+      <button id="menuToggle" class="lg:hidden p-2 hover:text-[#C89438] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-      </a>
+      </button>
 
-      <!-- ✉️ Email -->
-      <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
-        </svg>
-      </a>
-    </div>
-  </div>
+      <div class="hidden lg:block shrink-0">
+        <a href="index.html">
+          <img src="images/mlogo.png" alt="Mosse Logo" class="w-16">
+        </a>
+      </div>
 
-  <!-- Logo Section -->
-  <div class="text-center py-6">
-    <img src="images/mlogo.png" alt="Mosse Home Care Logo" class="mx-auto w-36">
-  </div>
+      <div class="hidden lg:flex items-center space-x-12 uppercase tracking-[0.25em] text-[11px] font-bold">
+        <a href="index.html" class="hover:text-[#C89438] transition">Home</a>
+        <a href="services.html" class="hover:text-[#C89438] transition">Services</a>
+        <a href="amenities.html" class="hover:text-[#C89438] transition">Amenities</a>
+        <a href="tour.html" class="hover:text-[#C89438] transition">Tour</a>
+        <a href="faq.html" class="text-[#C89438] transition">FAQs</a>
+        <a href="contact.html" class="hover:text-[#C89438] transition">Contact</a>
+      </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-[#1D2B4F] text-white z-50 hidden transition-colors duration-300">
-    <!-- Top Row -->
-    <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-      <button onclick="toggleMenu()" class="text-white text-xl font-light focus:outline-none">✕</button>
-      <div class="flex items-center space-x-6 pt-0.5">
-        <a href="tel:+16126364172" aria-label="Call us" class="hover:text-[#C89438] transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z" />
+      <div class="flex items-center space-x-6">
+        <a href="tel:+16126364172" aria-label="Call" class="hover:text-[#C89438] transition-transform hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a16 16 0 0016 16l2.293-2.293a1 1 0 000-1.414l-4.586-4.586a1 1 0 00-1.414 0L13 14.414a12 12 0 01-5.414-5.414L9.586 9a1 1 0 000-1.414L5 3.293a1 1 0 00-1.414 0L3 5z"/>
           </svg>
         </a>
-
-        <a href="mailto:mosseassisted@gmail.com" aria-label="Email us" class="hover:text-[#C89438] transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+        <a href="mailto:mosseassisted@gmail.com" aria-label="Email" class="hover:text-[#C89438] transition-transform hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z"/>
           </svg>
         </a>
       </div>
     </div>
+  </nav>
 
-    <!-- Navigation Links -->
-    <ul class="flex flex-col space-y-4 px-6 py-6 text-lg">
-      <li><a href="index.html" class="hover:text-gold-500">Home</a></li>
-      <li><a href="services.html" class="hover:text-gold-500">Services</a></li>
-      <li><a href="amenities.html" class="hover:text-gold-500">Amenities</a></li>
-      <li><a href="tour.html" class="hover:text-gold-500">Tour</a></li>
-      <li><a href="contact.html" class="hover:text-gold-500">Contact</a></li>
-      <li>
-        <a href="tour.html" class="mt-4 inline-block bg-[#C89438] hover:bg-[#b58028] text-white py-2 px-4 rounded transition-all duration-300">
-          Schedule a Tour
-        </a>
-      </li>
-    </ul>
+
+  <div id="mobileMenu" class="fixed inset-0 bg-[#1D2B4F] z-[60] hidden flex-col items-center justify-center text-white space-y-8 text-2xl uppercase tracking-widest font-serif">
+    <button onclick="toggleMenu()" class="absolute top-10 right-10 text-4xl">×</button>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="amenities.html" onclick="toggleMenu()">Amenities</a>
+    <a href="tour.html" onclick="toggleMenu()">Tour</a>
+    <a href="faq.html" onclick="toggleMenu()">FAQs</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
   </div>
-<main class="max-w-6xl mx-auto px-6 py-12">
-  
-  <!-- HERO SECTION -->
-  <section class="text-center mb-12">
-    <h2 class="text-4xl text-[#1D2B4F]  mb-3">Frequently Asked Questions</h2>
-    <p class="text-lg text-gray-700 py-5">Everything you need to know about care, services, admissions, billing, and daily life at Mosse Home Care.</p>
-  </section>
-  
-  <!-- COLLAPSIBLE FAQ GROUP -->
-  <div class="space-y-8">
+
+  <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
     
-    <!-- GENERAL FACILITY QUESTIONS -->
-<!-- GENERAL FACILITY QUESTIONS -->
-<div>
-  <h3 class="text-2xl  text-[#1D2B4F] mb-4">General Facility Questions</h3>
-  
-  <div class="space-y-6">
-<details class="faq-metal">      <summary class="font- cursor-pointer">1. What age group do you serve?</summary>
-      <p class="mt-2 text-gray-700">We specialize in serving adults aged 55–65. Our home is structured and licensed specifically for this age group under MDH regulations.</p>
-    </details>
+    <header class="text-center mb-16 fade-in">
+      <span class="text-[#C89438] uppercase tracking-[0.5em] text-sm font-bold block mb-4">Clarity & Support</span>
+      <h1 class="text-4xl md:text-6xl font-serif text-[#1D2B4F] mb-6">Frequently Asked Questions</h1>
+    </header>
     
-<details class="faq-metal">      <summary class="font- cursor-pointer">2. Are you licensed by the Minnesota Department of Health (MDH)?</summary>
-      <p class="mt-2 text-gray-700">Yes. Mosse Home Care LLC is a licensed Basic Assisted Living facility under the Minnesota Department of Health.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font- cursor-pointer">3. What is your staff-to-resident ratio?</summary>
-      <p class="mt-2 text-gray-700">We maintain a 1:1 staff-to-resident ratio during waking hours to ensure individualized attention and timely support.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font- cursor-pointer">4. How many residents do you accept?</summary>
-      <p class="mt-2 text-gray-700">We are licensed for a maximum of 5 residents to maintain a quiet, personalized home setting.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font- cursor-pointer">5. What types of rooms are available?</summary>
-      <p class="mt-2 text-gray-700">We offer private bedrooms with options for custom furnishing, personal décor, and safety features like grab bars and emergency access.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font-medium cursor-pointer">6. Are pets allowed?</summary>
-      <p class="mt-2 text-gray-700">Unfortunately, we do not allow personal pets in the home.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font-medium cursor-pointer">7. Can I schedule a tour?</summary>
-      <p class="mt-2 text-gray-700">Yes! Please use the "Schedule a Tour" button or contact us directly at (612) 636‑4172 to arrange a private walkthrough of the home.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font-medium cursor-pointer">8. What’s included in your base rate?</summary>
-      <p class="mt-2 text-gray-700">Our base rate typically includes housing, meals, housekeeping, laundry, 24/7 staff availability, medication reminders, and delegated clinical oversight. Specific services are outlined in the client’s Service Agreement.</p>
-    </details>
-    
-<details class="faq-metal">      <summary class="font-medium cursor-pointer">9. What makes you different from larger facilities or group homes?</summary>
-      <p class="mt-2 text-gray-700">We are a real residential home. We provide warmth, cultural understanding, 1:1 care, and compliance-driven excellence without the impersonal feel of large institutions.</p>
-    </details>
-  </div>
-</div>
+    <div class="space-y-12">
+      <section class="fade-in">
+        <h3 class="text-2xl font-serif text-[#1D2B4F] mb-6 border-b border-gray-200 pb-2">General Facility Questions</h3>
+        <div class="space-y-4">
+          <details class="faq-metal">
+            <summary>1. What age group do you serve?</summary>
+            <p class="mt-2 text-gray-700">We specialize in serving adults aged 55–65. Our home is structured and licensed specifically for this age group under MDH regulations.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>2. Are you licensed by the Minnesota Department of Health (MDH)?</summary>
+            <p class="mt-2 text-gray-700">Yes. Mosse Home Care LLC is a licensed Basic Assisted Living facility under the Minnesota Department of Health.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>3. What is your staff-to-resident ratio?</summary>
+            <p class="mt-2 text-gray-700">We maintain a 1:1 staff-to-resident ratio during waking hours to ensure individualized attention and timely support.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>4. How many residents do you accept?</summary>
+            <p class="mt-2 text-gray-700">We are licensed for a maximum of 5 residents to maintain a quiet, personalized home setting.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>5. What types of rooms are available?</summary>
+            <p class="mt-2 text-gray-700">We offer private bedrooms with options for custom furnishing, personal décor, and safety features like grab bars and emergency access.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>6. Are pets allowed?</summary>
+            <p class="mt-2 text-gray-700">Unfortunately, we do not allow personal pets in the home.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>7. Can I schedule a tour?</summary>
+            <p class="mt-2 text-gray-700">Yes! Please use the "Book Tour" button or contact us directly at (612) 636‑4172 to arrange a private walkthrough of the home.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>8. What’s included in your base rate?</summary>
+            <p class="mt-2 text-gray-700">Our base rate typically includes housing, meals, housekeeping, laundry, 24/7 staff availability, medication reminders, and delegated clinical oversight. Specific services are outlined in the client’s Service Agreement.</p>
+          </details>
+          
+          <details class="faq-metal">
+            <summary>9. What makes you different from larger facilities or group homes?</summary>
+            <p class="mt-2 text-gray-700">We are a real residential home. We provide warmth, cultural understanding, 1:1 care, and compliance-driven excellence without the impersonal feel of large institutions.</p>
+          </details>
+        </div>
+      </section>
     </div>
-</main>
+  </main>
 
-
-  <!-- Footer -->
-  <footer class="bg-[#1D2B4F] text-white text-sm py-6 mt-12">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <img src="images/mlogo.png" class="w-16 mb-2" alt="Mosse Logo">
+  <footer class="bg-[#1D2B4F] text-white py-16 px-6 border-t border-white/10">
+    <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <img src="images/mlogo.png" class="w-20 opacity-90" alt="Mosse Logo">
+      <div class="text-center md:text-right text-sm opacity-60">
+        <p>14399 Bayberry Circle, Rosemount, MN 55068</p>
+        <p>(612) 636-4172 | mosseassisted@gmail.com</p>
       </div>
-<div class="space-y-1 mt-4 md:mt-0">
-  <p>14399 Bayberry Circle, Rosemount, MN, 55068</p>
-  <p>
-    Phone:
-    <a href="tel:+16126364172" class="hover:text-[#C89438] transition-colors">
-      (612) 636-4172
-    </a>
-  </p>
-  <p>
-    Email:
-    <a href="mailto:mosseassisted@gmail.com" class="hover:text-[#C89438] transition-colors">
-      mosseassisted@gmail.com
-    </a>
-  </p>
-</div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // 🟦 NAVBAR + MOBILE MENU LOGIC
     const navBar = document.getElementById("navBar");
     const mobileMenu = document.getElementById("mobileMenu");
-    const menuToggle = document.getElementById("menuToggle");
 
     function toggleMenu() {
       mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
       document.body.classList.toggle("overflow-hidden");
     }
 
-    menuToggle.addEventListener("click", toggleMenu);
+    document.getElementById("menuToggle").addEventListener("click", toggleMenu);
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) navBar.classList.add("scrolled-nav");
+      if (window.scrollY > 50) navBar.classList.add("scrolled-nav");
       else navBar.classList.remove("scrolled-nav");
-
-      if (!mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.toggle("scrolled-menu", window.scrollY > 10);
-      }
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
