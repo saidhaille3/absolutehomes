@@ -27,7 +27,7 @@
       font-family: 'Cinzel', serif;
     }
 
-    /* Elite Glass Navigation */
+
     .nav-standard {
       background-color: var(--navy);
       transition: all 0.4s ease;
@@ -270,7 +270,7 @@
       }
     });
 
-    // --- REPAIRED SLIDER SCRIPT ---
+
     const slider = document.getElementById("slider");
     const images = [
       "images/1.jpeg", "images/2.jpeg", "images/3.jpeg", "images/4.jpeg",
@@ -281,7 +281,7 @@
     let index = 0;
 
     function updateImage() {
-      // Create a temporary image object to ensure it loads before fading in
+
       const img = new Image();
       img.src = images[index];
       img.onload = () => {
@@ -303,7 +303,7 @@
       const content = card.querySelector(".card-content");
       const isExpanded = content.classList.contains("expanded");
       
-      // Close other cards for a clean "accordion" feel
+
       document.querySelectorAll('.card-content').forEach(c => c.classList.remove('expanded'));
       
       if (!isExpanded) {
